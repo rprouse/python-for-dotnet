@@ -1,4 +1,4 @@
-from .app import Blueprint
+from .app import Chapter1
 
 if __name__ == '__main__':
-    Blueprint.run()
+    Chapter1.run()

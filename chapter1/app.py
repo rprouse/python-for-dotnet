@@ -1,4 +1,4 @@
-class Blueprint:
+class Chapter1:
 
     @staticmethod
     def run():
