@@ -30,7 +30,7 @@ def show_header():
     print()
 
 
-def get_guess():
+def get_guess() -> int:
     try:
         text = input("What number am I thinking of? ")
         val = int(text)
@@ -43,7 +43,7 @@ def get_guess():
         return None
 
 
-def evaluate_guess(guess, rand):
+def evaluate_guess(guess: int, rand: int) -> bool:
     if guess == rand:
         return True
 
