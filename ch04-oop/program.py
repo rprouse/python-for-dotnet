@@ -2,10 +2,22 @@ from models.car import Car
 from models.basic_car import BasicCar
 from models.electric_car import ElectricCar
 from models.sports_car import SportsCar
+from models.parking_lot import ParkingLot
 from typing import List
+
 
 def main():
     cars: List[Car] = create_cars()
+    drive_cars(cars)
+    park_cars(cars)
+
+
+def park_cars(cars: List[Car]) -> None:
+    lot = ParkingLot.create(5, 3)
+    print(lot.spots)
+
+
+def drive_cars(cars: List[Car]) -> None:
     for car in cars:
         car.drive()
         car.refuel()

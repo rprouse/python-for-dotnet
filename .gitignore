@@ -108,4 +108,5 @@ config.env
 *.key
 *.pem
 
+.mypy_cache
 test.json
