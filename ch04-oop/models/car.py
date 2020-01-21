@@ -8,9 +8,13 @@ class Car(abc.ABC):
         self.cylinders: int = cylinders
         self.base_price: float = base_price
 
-    def drive(self):
+    def drive(self) -> None:
         print(f"Car: the {self.model_name} goes vroom!")
 
     @abc.abstractmethod
-    def refuel(self):
+    def refuel(self) -> None:
         pass
+
+    @property
+    def is_electric(self) -> bool:
+        return self.engine_type == 'electric'

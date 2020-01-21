@@ -9,6 +9,8 @@ def main():
     for car in cars:
         car.drive()
         car.refuel()
+        if car.is_electric:
+            print("This is an electric car!")
         print()
 
 
