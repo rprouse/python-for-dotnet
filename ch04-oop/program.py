@@ -4,7 +4,9 @@ from typing import List
 def main():
     cars: List[Car] = create_cars()
     for car in cars:
-        print(car.model_name)
+        car.drive()
+        car.refuel()
+        print()
 
 
 def create_cars() -> List[Car]:

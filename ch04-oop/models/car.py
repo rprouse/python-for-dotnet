@@ -7,3 +7,9 @@ class Car:
         self.engine_type: str = engine_type
         self.cylinders: int = cylinders
         self.base_price: float = base_price
+
+    def drive(self):
+        print(f"Car: the {self.model_name} goes vroom!")
+
+    def refuel(self):
+        pass
