@@ -1,4 +1,5 @@
 import abc
+from abc import abstractmethod
 
 class Car(abc.ABC):
 
@@ -11,7 +12,7 @@ class Car(abc.ABC):
     def drive(self) -> None:
         print(f"Car: the {self.model_name} goes vroom!")
 
-    @abc.abstractmethod
+    @abstractmethod
     def refuel(self) -> None:
         pass
 
