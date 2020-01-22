@@ -19,3 +19,9 @@ class Car(abc.ABC):
     @property
     def is_electric(self) -> bool:
         return self.__engine_type == 'electric'
+
+    def __repr__(self):
+        return self.__str__()
+
+    def __str__(self):
+        return f"<{type(self).__name__}> Model: {self.model_name}, Price: ${self.base_price:,.0f}"

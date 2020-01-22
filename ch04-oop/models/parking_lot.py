@@ -15,6 +15,12 @@ class ParkingLot:
             for n in spot_names
         }
 
+    def park(self, car: Car):
+        for k, v in self.spots.items():
+            if v is None:
+                self.spots[k] = car
+                break
+
     @staticmethod
     def create(spots_per_level: int, levels: int) -> "ParkingLot":
         names = []

@@ -4,7 +4,7 @@ from models.electric_car import ElectricCar
 from models.sports_car import SportsCar
 from models.parking_lot import ParkingLot
 from typing import List
-
+from pprint import pprint
 
 def main():
     cars: List[Car] = create_cars()
@@ -14,7 +14,10 @@ def main():
 
 def park_cars(cars: List[Car]) -> None:
     lot = ParkingLot.create(5, 3)
-    print(lot.spots)
+    for c in cars:
+        lot.park(c)
+
+    pprint(lot.spots)
 
 
 def drive_cars(cars: List[Car]) -> None:
