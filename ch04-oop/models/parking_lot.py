@@ -1,5 +1,5 @@
 from models.car import Car
-from typing import List, Dict
+from typing import List, Dict, Generator
 
 
 class ParkingLot:
@@ -31,3 +31,7 @@ class ParkingLot:
 
         return ParkingLot(names)
 
+    # Make this class `IEnumerable`
+    def __iter__(self) -> Generator:
+        for i in self.spots.items():
+            yield i

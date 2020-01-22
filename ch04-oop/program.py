@@ -17,7 +17,9 @@ def park_cars(cars: List[Car]) -> None:
     for c in cars:
         lot.park(c)
 
-    pprint(lot.spots)
+    for spot, car in lot:
+        if car:
+            print(f"{spot} has a {car}")
 
 
 def drive_cars(cars: List[Car]) -> None:
