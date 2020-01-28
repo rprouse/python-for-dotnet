@@ -2,6 +2,7 @@ import bs4
 from colorama import Fore
 import httpx
 
+
 def main():
     print("Using Python Packages")
     get_titles()
